@@ -21,10 +21,21 @@
         <script>
             
       acpopup('create', 'AP-57DPo2iMeexKEZhnZ');
-      acpopup('show', 'AP-57DPo2iMeexKEZhnZ');
+      // acpopup('show', 'AP-57DPo2iMeexKEZhnZ');
     
         </script>
-    
+        <!-- Подключение вашего скрипта -->
+        <script>
+            // Функция, которая будет запускаться при клике на кнопку
+            function showPopupClick() {
+                // Вызов функции acpopup('show') с нужными параметрами
+                acpopup('show', 'AP-57DPo2iMeexKEZhnZ', {
+                    onShow: function () {
+                        console.log('Посмотрите на экран');
+                    },
+                });
+            }
+        </script>
 
     
     <meta charset="UTF-8">
