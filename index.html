@@ -24,6 +24,18 @@
       // acpopup('show', 'AP-57DPo2iMeexKEZhnZ');
     
         </script>
+        document.addEventListener('DOMContentLoaded', function() {
+        // Запуск функции через 5 секунд
+        setTimeout(function() {
+            // Вызов функции aсpopup('show') с нужными параметрами
+            acpopup('show', 'AP-57DPo2iMeexKEZhnZ', {
+                onShow: function () {
+                    console.log('Посмотрите на экран');
+                },
+            });
+        }, 5000); // 5000 миллисекунд = 5 секунд
+    });
+    
         <!-- Подключение вашего скрипта -->
         <script>
             // Функция, которая будет запускаться при клике на кнопку
