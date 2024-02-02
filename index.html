@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Запуск функции через 5 секунд
     setTimeout(function() {
         // Вызов функции aсpopup('show') с нужными параметрами
-        acpopup('show', 'AP-6KYmeP9ga9PtsqJ-I', {
+        acpopup('show', 'AP-57DPo2iMeexKEZhnZ', {
             onShow: function () {
                 console.log('Посмотрите на экран, прошло 5 секунд');
             },
@@ -33,7 +33,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 5000); // 5000 миллисекунд = 5 секунд
 });
 
-
+    // Показ попапа при клике на кнопку
+    <script>
+        // Функция, которая будет запускаться при клике на кнопку
+        function showPopupClick() {
+            // Вызов функции acpopup('show') с нужными параметрами
+            acpopup('show', 'AP-57DPo2iMeexKEZhnZ', {
+                onShow: function () {
+                    console.log('Посмотрите на экран');
+                },
+            });
+        }
+    </script>
+        
         </script>
     
     <meta charset="UTF-8">
@@ -42,7 +54,9 @@ document.addEventListener('DOMContentLoaded', function() {
 </head>
 <body>
 
-  <p>Hello, world!</>
+    <p>Hello, world!</>
+    <!-- Кнопка, по которой будет осуществляться клик -->
+    <button onclick="showPopupClick()">Показать попап</button>
     
 </body>
 </html>
