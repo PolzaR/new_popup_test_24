@@ -19,7 +19,15 @@
     
         </script>
     <script>
-
+            function showPopupClick() {
+            // Вызов функции acpopup('show') с нужными параметрами
+            acpopup('show', 'AP-57DPo2iMeexKEZhnZ', {
+                onShow: function () {
+                    console.log('Посмотрите на экран');
+                },
+            });
+        }
+        
         // Ожидание загрузки страницы
 document.addEventListener('DOMContentLoaded', function() {
     // Запуск функции через 5 секунд
@@ -34,19 +42,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
     // Показ попапа при клике на кнопку
-    <script>
-        // Функция, которая будет запускаться при клике на кнопку
-        function showPopupClick() {
-            // Вызов функции acpopup('show') с нужными параметрами
-            acpopup('show', 'AP-57DPo2iMeexKEZhnZ', {
-                onShow: function () {
-                    console.log('Посмотрите на экран');
-                },
-            });
-        }
     </script>
-        
-        </script>
+
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
