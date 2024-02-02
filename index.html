@@ -20,16 +20,30 @@
         </script>
         <script>
             
-      acpopup('create', 'AP-57DPo2iMeexKEZhnZ');
-      acpopup('show', 'AP-57DPo2iMeexKEZhnZ');
+//       acpopup('create', 'AP-57DPo2iMeexKEZhnZ');
+//       acpopup('show', 'AP-57DPo2iMeexKEZhnZ');
     
-        </script>
-<script>
-    acpopup('show', 'AP-57DPo2iMeexKEZhnZ', {
-    onShow: function () {
-        console.log('look at the screen')
-    },
-})
+//         </script>
+// <script>
+//     acpopup('show', 'AP-57DPo2iMeexKEZhnZ', {
+//     onShow: function () {
+//         console.log('look at the screen')
+//     },
+// })
+
+    // Ожидание загрузки страницы
+document.addEventListener('DOMContentLoaded', function() {
+    // Запуск функции через 5 секунд
+    setTimeout(function() {
+        // Вызов функции aсpopup('show') с нужными параметрами
+        acpopup('show', 'AP-6KYmeP9ga9PtsqJ-I', {
+            onShow: function () {
+                console.log('Посмотрите на экран');
+            },
+        });
+    }, 5000); // 5000 миллисекунд = 5 секунд
+});
+
 </script>
     
     <meta charset="UTF-8">
