@@ -2,25 +2,7 @@
 <html lang="en">
 <head>
         <script src="script.js"></script>
-
-<!-- Матчинг при создании попапа -->
-        <script>
-    document.getElementById('registrationForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Предотвращаем отправку формы по умолчанию
-
-    // Получаем значение email из поля ввода
-    var email = document.getElementById('emailInput').value;
-
-    // Вызываем вашу функцию с необходимыми параметрами
-    acpopup('create', 'AP-57DPo2iMeexKEZhnZ', {
-        matching_mode: 'email',
-        matching: {
-            email: email, // Передаем введенный email
-            db_ids: [82]
-        }
-    });
-});
-        </script>
+        
         <!-- Подключение вашего скрипта -->
         <script>
             // Функция, которая будет запускаться при клике на кнопку
@@ -52,6 +34,24 @@
     <button type="submit">Submit</button>
 </form>
 
-    
+    <!-- Матчинг при создании попапа -->
+        <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Предотвращаем отправку формы по умолчанию
+
+    // Получаем значение email из поля ввода
+    var email = document.getElementById('emailInput').value;
+
+    // Вызываем вашу функцию с необходимыми параметрами
+    acpopup('create', 'AP-57DPo2iMeexKEZhnZ', {
+        matching_mode: 'email',
+        matching: {
+            email: email, // Передаем введенный email
+            db_ids: [82]
+        }
+    });
+});
+        </script>
+        
 </body>
 </html>
