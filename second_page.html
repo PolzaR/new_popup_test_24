@@ -2,26 +2,25 @@
 <html lang="en">
 <head>
         <script src="script.js"></script>
+
+<!-- Матчинг при создании попапа -->
         <script>
-            
-      acpopup('create', 'AP-57DPo2iMeexKEZhnZ');
-      // acpopup('show', 'AP-57DPo2iMeexKEZhnZ');
-    
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Предотвращаем отправку формы по умолчанию
+
+    // Получаем значение email из поля ввода
+    var email = document.getElementById('emailInput').value;
+
+    // Вызываем вашу функцию с необходимыми параметрами
+    acpopup('create', 'AP-57DPo2iMeexKEZhnZ', {
+        matching_mode: 'email',
+        matching: {
+            email: email, // Передаем введенный email
+            db_ids: [82]
+        }
+    });
+});
         </script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-            // Запуск функции через 5 секунд
-            setTimeout(function() {
-                // Вызов функции aсpopup('show') с нужными параметрами
-                acpopup('show', 'AP-57DPo2iMeexKEZhnZ', {
-                    onShow: function () {
-                        console.log('Посмотрите на экран');
-                    },
-                });
-            }, 5000); // 5000 миллисекунд = 5 секунд
-        });
-        </script>
-    
         <!-- Подключение вашего скрипта -->
         <script>
             // Функция, которая будет запускаться при клике на кнопку
@@ -45,6 +44,14 @@
     <p>Hello, world!</>
     <!-- Кнопка, по которой будет осуществляться клик -->
     <button onclick="showPopupClick()">Показать попап</button>
+
+ <form id="registrationForm">
+    <label>Email:</label>
+    <input type="email" id="emailInput" required>
+    <br>
+    <button type="submit">Submit</button>
+</form>
+
     
 </body>
 </html>
