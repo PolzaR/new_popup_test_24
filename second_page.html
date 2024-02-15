@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script>
+            
+      acpopup('create', 'AP-57DPo2iMeexKEZhnZ');
+      // acpopup('show', 'AP-57DPo2iMeexKEZhnZ');
+    
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+            // Запуск функции через 5 секунд
+            setTimeout(function() {
+                // Вызов функции aсpopup('show') с нужными параметрами
+                acpopup('show', 'AP-57DPo2iMeexKEZhnZ', {
+                    onShow: function () {
+                        console.log('Посмотрите на экран');
+                    },
+                });
+            }, 5000); // 5000 миллисекунд = 5 секунд
+        });
+        </script>
+    
+        <!-- Подключение вашего скрипта -->
+        <script>
+            // Функция, которая будет запускаться при клике на кнопку
+            function showPopupClick() {
+                // Вызов функции acpopup('show') с нужными параметрами
+                acpopup('show', 'AP-57DPo2iMeexKEZhnZ', {
+                    onShow: function () {
+                        console.log('Посмотрите на экран');
+                    },
+                });
+            }
+        </script>
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOC-577</title>
+</head>
+<body>
+
+    <p>Hello, world!</>
+    <!-- Кнопка, по которой будет осуществляться клик -->
+    <button onclick="showPopupClick()">Показать попап</button>
+    
+</body>
+</html>
