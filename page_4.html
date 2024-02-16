@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <script src="script.js"></script>
+
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOC-577</title>
+</head>
+<body>
+
+    <p>Hello, world!</>
+    <!-- Кнопка, по которой будет осуществляться клик -->
+    <button onclick="showPopupClick()">Показать попап</button>
+
+
+    <!-- Функция, которая будет запускаться при клике на кнопку -->
+    <script>
+        function showPopupClick() {
+            // Вызов функции acpopup('show') с нужными параметрами
+            acpopup('create', 'AP-57DPo2iMeexKEZhnZ');
+            acpopup('show', 'AP-57DPo2iMeexKEZhnZ', {
+                onShow: function () {
+                    console.log('Посмотрите на экран');
+                },
+            });
+        }
+    </script>
+        
+</body>
+</html>
